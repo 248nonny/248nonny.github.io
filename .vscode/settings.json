@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "**/assets/css/*.scss": "",
+        "*.html": "jekyll"
+    },
+    "files.autoGuessEncoding": true
+}
