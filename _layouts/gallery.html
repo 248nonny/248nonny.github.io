@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<h1>Gallery: {{ page.name }}</h1>
+<p class="post-meta">
+    {% if page.project %}
+        <a href="/projects/{{ page.name | downcase | replace: ' ','-' }}">Project Page</a> •
+    {% endif %}
+    Number of Images: {{ site.data.galleries[page.name] | size }}
+    {% if page.see_also_link %}
+        • See also: <a href="{{ page.see_also_link }}">{{ page.see_also_text }}</a>
+    {% endif %}
+</p>
+<br><br>
+
+
+{% assign imgs = site.data.galleries[page.name] %}
+
+{% if page.sort_by == "date" or page.sort_by == "oldest" %}
+    {% assign imgs = imgs | sort: "date" %}
+{% elsif page.sort_by == "newest" %}
+    {% assign imgs = imgs | sort: "date" | reverse %}
+{% elsif page.sort_by == "alphabetic" %}
+    {% assign imgs = imgs | sort: "name" %}
+{% endif %}
+
+{% for img in imgs %}
+    <div class="gallery-title">
+        <h2 style="margin: 0px">{{ img.title }}</h2> <span class="grey-color">{{ img.date | date: "%b %-d, %Y" }}</span><br>
+    </div>
+    <img class="gallery-image" src="/galleries/{{ page.name }}/{{ img.filename }}" alt="{{ img.alt }}">
+    <p class="gallery-caption">{{ img.caption }}</p>
+    <br><br><br><br>
+{% endfor %}

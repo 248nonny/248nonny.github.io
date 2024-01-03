@@ -3,10 +3,47 @@ title: Home
 layout: default
 mynumber: 5
 ---
-
+{%- comment -%} 
 <h1>Hello World!</h1>
 
 <p class="round-box" style="float: left">
     This site is currently under construction.<br>
     Feel free to check out what's already built :D
-</p>
+</p> {%- endcomment -%}
+
+<h1>Welcome!</h1>
+
+<div class="row">
+
+    <div class="menu-column">
+        <h3>Featured Projects:</h3>
+        <ul>
+            <li><a href="/projects/wavetrace/">WaveTrace</a></li>
+            <li><a href="/projects/arc-pics/">Arc Pics</a></li>
+        </ul>
+        <a href="/about/me/">About Me</a>
+    </div>
+
+    <div class="main-column">
+
+        <p>
+            RC is a website about many things, from coding to electronics to music.
+            Really, anything that interests me may find its way here!
+        </p>
+
+        <br>
+
+        <h2>Recent Posts</h2>
+        <ul>
+            {% for post in site.posts limit: 3 %}
+                <li>
+                    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                    <!--{{ post.excerpt }} -->
+                </li>
+            {% endfor %}
+        </ul>
+        <a href="/blog/">See all posts</a>
+    </div>
+
+
+</div>

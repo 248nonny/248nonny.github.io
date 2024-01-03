@@ -14,7 +14,20 @@ layout: default
       </time>
       {%- if page.author -%}
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</p>
+      {%- endif -%}
+      {%- assign project_cat = page.categories[0] | escape | downcase -%}
+      {%- if project_cat == "projects" -%}
+        <br>
+        <span>Project: <a href="/projects/{{ page.categories[1] | downcase }}">{{ page.categories[1] }}</a></span>
+      {%- endif -%}
+      {% if page.tags %}
+        <br>
+        <span>Tags: </span>
+        {% for tag in page.tags %}
+          <span> {{ tag }}{% if forloop.last %}.{% else %},{% endif %}</span>
+        {% endfor %}
+      {% endif %}
+    </p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">

@@ -26,3 +26,7 @@ For creating a project, make a .md file in _projects. this may have the attribut
 - importance
     -> a string that projects will be sorted with in alphabetical order
     -> e.g. "aaa" is placed before "bbb".
+- github_repo
+    -> the name of github repo, assumed to be under my username (do I use "my" or "our"
+        or "your" when addressing myself?)
+    -> a link to this will be provided.

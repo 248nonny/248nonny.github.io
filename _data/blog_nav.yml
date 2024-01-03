@@ -1,0 +1,6 @@
+- name: Latest Posts
+  link: /blog/
+- name: Posts by Tag
+  link: /blog/tags/
+- name: Posts by Project
+  link: /blog/projects/

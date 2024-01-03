@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<h1>Galleries</h1>
+
+<p class="round-box" style="float: right; max-width:200px">While most galleries are associated with a project, some are standalone.</p>
+
+<ul>
+{% for gallery in site.galleries %}
+    <li><h2><a href="{{ gallery.url }}">{{ gallery.name }}</a></h2></li>
+    <br>
+{% endfor %}
+</ul>

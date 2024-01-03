@@ -1,0 +1,21 @@
+---
+layout: blog_posts
+header: Posts by Project
+name: Project Posts
+---
+
+{% assign projects = site.projects | sort: 'importance' %}
+{% for project in projects %}
+    <h2><a href="{{ project.url }}">{{ project.name }}</a></h2>
+    <ul>
+    {% for post in site.posts %}
+        {% if post.categories[0] == "Projects" %}
+            {% if project.name == post.categories[1] %}
+                <li>
+                    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                </li>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    </ul>
+{% endfor %}

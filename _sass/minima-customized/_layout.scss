@@ -44,10 +44,6 @@
   margin-bottom: 0;
   float: left;
 
-  &,
-  &:visited {
-    color: $grey-color-dark;
-  }
 }
 
 .site-nav {
@@ -282,8 +278,35 @@
 
 
 
+/*
+    Galleries
+*/
+
+.gallery-image {
+  max-width: $content-width;
+  max-height: 600px;  
+  border: 1.5px solid $grey-color;
+  border-radius: 10px;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  display: block;
+}
+
+.gallery-title {
+  text-align: center;
+}
+
+.gallery-caption {
+  margin: auto;
+  width: 400px;
+  text-align: center;
+}
 
 
+/*
+    diy colors, borders, and menus. 
+*/
 
 .round-box {
   border-radius: 20px;
@@ -303,9 +326,8 @@
 }
 
 .menu-column {
-  width: 20%;
-  text-align: right;
-  padding: 10px;
+  text-align: center;
+  padding: 15px;
   border-radius: 10px;
   border: 2px solid $grey-color-light;
   float: right;
@@ -337,5 +359,9 @@
 }
 
 .legacy-purple {
-  color: $color-legacy-purple
+  color: $color-legacy-purple;
+}
+
+.grey-color {
+  color: $grey-color;
 }

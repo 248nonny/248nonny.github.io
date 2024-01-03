@@ -1,0 +1,24 @@
+- filename: 1.png
+  title: Test Image
+  alt: this is alt text for the image.
+  date: 2023-01-03
+  caption: '
+  this is a description of the image, where clearly an image was taken and whatnot. I love this game,
+  and this gallery is going to look pretty great soon.
+  '
+- filename: 2.png
+  title: Test Image 2
+  alt: this is alt text for the other image.
+  date: 2022-01-03
+  caption: '
+  this is a description of the image, where clearly an image was taken and whatnot. I love this game,
+  and this gallery is going to look pretty great soon.
+  '
+- filename: 3.png
+  title: Test Image 3
+  alt: this is alt text for the image.
+  date: 2024-01-03
+  caption: '
+  this is a description of the image, where clearly an image was taken and whatnot. I love this game,
+  and this gallery is going to look pretty great soon.
+  '

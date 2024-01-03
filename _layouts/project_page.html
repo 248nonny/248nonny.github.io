@@ -23,24 +23,37 @@ layout: default
                 {% else %}
                     <span>
                 {% endif %}
-                {{ page.status }}</span></p>{% endif %}
+            {{ page.status }}</span></p>{% endif %}
 
         {% if page.started %}<p>Started: {{ page.started }}</p>{% endif %}
+
         {% if page.ended %}<p>Ended: {{ page.ended }}</p>{% endif %}
+
         {%- if page.gallery -%}
-        <a class="page-link" href="/galleries/{{ page.name | downcase }}">Project Gallery</a>
+            <p><a class="page-link" 
+            {% if page.gallery_name %}
+                href="/galleries/{{ page.gallery_name }}"
+            {% else %}
+                href="/galleries/{{ page.name | downcase | replace: ' ', '-'}}"
+            {% endif %}
+            >Project Gallery</a></p>
+        {% endif %}
+
+        <!-- Check for github repo, add link if it exists. Link code copied from _includes/social.html. -->
+        {% if page.github_repo %}
+        <p><a href="https://github.com/{{ site.github_username| cgi_escape | escape }}/{{ page.github_repo }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg> <span class="username">{{ page.github_repo }}</span></a></p>
         {%- endif -%}
+
     </div>
     <div class="main-column">
-        {%- if page.description -%}
+        {%- if content -%}
             <div class="round-box">
-                <h3>Description:</h3>
-                <p>{{ page.description }}</p>
+                {{ content }}
             </div>
         {%- endif -%}
 
 
-        {% assign category_name = page.name | downcase %}
+        {% assign category_name = page.name %}
         {% assign category = site.categories[category_name] %}
         {% if category %}
             <div class="project-posts">
@@ -68,11 +81,6 @@ layout: default
             </li>
             {% endfor %}
         {% endif %}
-
-
-        <div class="post-content e-content" itemprop="articleBody">
-            {{ content }} 
-        </div>
     </div>
 
 </div>

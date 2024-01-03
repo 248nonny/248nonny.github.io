@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<h1>{{ page.header }}</h1>
+
+<div class="row">
+    <div class="menu-column">
+        {% for nav in site.data.about_nav %}
+            <a href="{{ nav.link }}">{{ nav.name }}</a>
+            {% if forloop.last == false %}<br>{% endif %}
+        {% endfor %}
+    </div>
+    <div class="main-column">
+        {{ content }}
+    </div>
+</div>
