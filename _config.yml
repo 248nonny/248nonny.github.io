@@ -21,7 +21,7 @@
 title: RC
 email: ronny.cravioto@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  RC - A website created for the purpose of sharing the projetcts,
+  RC - A website created for the purpose of sharing the projects,
   thoughts, and doings of Ronny Cravioto-Ross with the world at large.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
