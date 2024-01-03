@@ -30,7 +30,7 @@ linkedin_username: r-cravioto-ross
 instagram_username: el_ronito
 
 # Build settings
-theme: minima
+# theme: minima
 plugins:
   - jekyll-feed
   - jekyll-sitemap
