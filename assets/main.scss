@@ -3,6 +3,12 @@
 ---
 
 @import "minima-customized";
+@import
+  "minima-customized/base",
+  "minima-customized/layout",
+  "minima-customized/syntax-highlighting"
+;
+
 
 
 @font-face {
