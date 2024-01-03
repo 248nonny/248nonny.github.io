@@ -1,0 +1,83 @@
+---
+layout: default
+title: Projects
+---
+
+{% assign description_characters = 150 %}
+<div class="row">
+    {% assign ongoing_projects = site.projects | where: 'status',"Ongoing" %}
+    {% assign ongoing_projects = ongoing_projects | sort: 'importance' %}
+    {% if ongoing_projects[0] %}
+        <div class= "half-column">
+        <h1>Ongoing Projects</h1>
+        {% for page in ongoing_projects %}
+            <h2 style="margin-top: 1cm"><a href="{{ page.url }}">{{ page.name }}</a></h2>
+            {% if page.short_description %}
+                {{ page.short_description }}
+            {% else %}
+            {{ page.description | truncate: description_characters}}
+            {% endif %}
+        {% endfor %}
+        </div>
+    {% endif %}
+
+    {% assign complete_projects = site.projects | where: 'status',"Complete" %}
+    {% assign complete_projects = complete_projects | sort: 'importance' %}
+    {% if complete_projects[0] %}
+        <div class= "half-column">
+        <h1>Ongoing Projects</h1>
+        {% for page in complete_projects %}
+            <h2 style="margin-top: 1cm"><a href="{{ page.url }}">{{ page.name }}</a></h2>
+            {% if page.short_description %}
+                {{ page.short_description }}
+            {% else %}
+            {{ page.description | truncate: description_characters}}
+            {% endif %}
+        {% endfor %}
+        </div>
+    {% endif %}
+
+</div>
+
+
+<p class="round-box" style="margin-top: 1cm; margin-bottom: 1cm">
+    Note that projects completed before December 2023 are listed in the Legacy section below,
+    as these projects predate the creation of this site.
+</p>
+
+
+
+<div class="row">
+    {% assign legacy_projects = site.projects | where: 'status',"Legacy" %}
+    {% assign legacy_projects = legacy_projects | sort: 'importance' %}
+    {% if legacy_projects[0] %}
+        <div class= "half-column">
+        <h1 id="legacy">Legacy Projects</h1>
+        {% for page in legacy_projects %}
+            <h2 style="margin-top: 1cm"><a href="{{ page.url }}">{{ page.name }}</a></h2>
+            {% if page.short_description %}
+                {{ page.short_description }}
+            {% else %}
+            {{ page.description | truncate: description_characters}}
+            {% endif %}
+        {% endfor %}
+        </div>
+    {% endif %}
+
+    {% assign complete_projects = site.projects | where: 'status',"Complete" %}
+    {% assign complete_projects = complete_projects | sort: 'importance' %}
+    {% if complete_projects[0] %}
+        <div class= "half-column">
+        <h1>Ongoing Projects</h1>
+        {% for page in complete_projects %}
+            <h2 style="margin-top: 1cm"><a href="{{ page.url }}">{{ page.name }}</a></h2>
+            {% if page.short_description %}
+                {{ page.short_description }}
+            {% else %}
+            {{ page.description | truncate: description_characters}}
+            {% endif %}
+        {% endfor %}
+        </div>
+    {% endif %}
+
+</div>

@@ -1,0 +1,78 @@
+---
+layout: default
+---
+
+<h1>
+    {{ page.name }}
+</h1>
+
+<div class="row">
+    <div class="menu-column">
+
+        {% if page.status %}
+            <p>Status:
+                {% assign status = page.status | downcase %}
+                {% if status == "ongoing" %}
+                    <span class="warning-yellow">
+                {% elsif status == "complete" %}
+                    <span class="good-green">
+                {% elsif status == "abandoned" %}
+                    <span class="error-red">
+                {% elsif status == "legacy" %}
+                    <span class="legacy-purple">
+                {% else %}
+                    <span>
+                {% endif %}
+                {{ page.status }}</span></p>{% endif %}
+
+        {% if page.started %}<p>Started: {{ page.started }}</p>{% endif %}
+        {% if page.ended %}<p>Ended: {{ page.ended }}</p>{% endif %}
+        {%- if page.gallery -%}
+        <a class="page-link" href="/galleries/{{ page.name | downcase }}">Project Gallery</a>
+        {%- endif -%}
+    </div>
+    <div class="main-column">
+        {%- if page.description -%}
+            <div class="round-box">
+                <h3>Description:</h3>
+                <p>{{ page.description }}</p>
+            </div>
+        {%- endif -%}
+
+
+        {% assign category_name = page.name | downcase %}
+        {% assign category = site.categories[category_name] %}
+        {% if category %}
+            <div class="project-posts">
+                <h2>Posts</h2>
+            </div>
+            {%- comment -%} <p>{{ category }}</p>
+            {% assign project_posts = site.posts | where: 'Category', category_name %}
+            {% for post in category.last %}
+                <li>
+                    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                    {{ post.excerpt }}
+                </li>
+            {% endfor %} {%- endcomment -%}
+            {% for category in site.categories %}
+            
+                {% if category[0] == category_name %}
+                    {% for post in category.last %}
+                    <li>
+                        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                        {{ post.excerpt }}
+                    </li>
+                    {% endfor %}
+
+                {% endif %}
+            </li>
+            {% endfor %}
+        {% endif %}
+
+
+        <div class="post-content e-content" itemprop="articleBody">
+            {{ content }} 
+        </div>
+    </div>
+
+</div>

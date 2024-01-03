@@ -2,12 +2,38 @@
  * Site header
  */
 .site-header {
-  border-top: 5px solid $grey-color-dark;
+  border-top: 2px solid $grey-color-light;
   border-bottom: 1px solid $grey-color-light;
   min-height: $spacing-unit * 1.865;
 
   // Positioning context for the mobile navigation icon
   position: relative;
+}
+
+
+// dropdown menu stuff
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: $grey-color-dark;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px,16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.site-logo {
+  width: $base-font-size * 4;
+  object-fit: cover;
 }
 
 .site-title {
@@ -252,4 +278,64 @@
       @include relative-font-size(1.125);
     }
   }
+}
+
+
+
+
+
+
+.round-box {
+  border-radius: 20px;
+  border: 2px solid $grey-color-light;
+  padding:20px;
+}
+
+.project-posts {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.main-column {
+  padding: 10px;
+  float: left;
+  width: 70%;
+}
+
+.menu-column {
+  width: 20%;
+  text-align: right;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid $grey-color-light;
+  float: right;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.half-column {
+  width: 45%;
+  padding: 10px;
+  float: left
+}
+
+
+.good-green {
+  color: $color-good-green;
+}
+
+.error-red {
+  color: $color-error-red;
+}
+
+.warning-yellow {
+  color: $color-warning-yellow;
+}
+
+.legacy-purple {
+  color: $color-legacy-purple
 }
