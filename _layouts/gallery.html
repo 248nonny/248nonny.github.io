@@ -14,8 +14,8 @@ layout: default
 </p>
 <br><br>
 
-
-{% assign imgs = site.data.galleries[page.name] %}
+{% assign data_name = page.name | replace: " ","-" %}
+{% assign imgs = site.data.galleries[data_name] %}
 
 {% if page.sort_by == "date" or page.sort_by == "oldest" %}
     {% assign imgs = imgs | sort: "date" %}
@@ -29,7 +29,7 @@ layout: default
     <div class="gallery-title">
         <h2 style="margin: 0px">{{ img.title }}</h2> <span class="grey-color">{{ img.date | date: "%b %-d, %Y" }}</span><br>
     </div>
-    <img class="gallery-image" src="/galleries/{{ page.name }}/{{ img.filename }}" alt="{{ img.alt }}">
+    <img class="gallery-image" src="/assets/images/{{ data_name }}/{{ img.filename }}" alt="{{ img.alt }}">
     <p class="gallery-caption">{{ img.caption }}</p>
     <br><br><br><br>
 {% endfor %}

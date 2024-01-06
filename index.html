@@ -37,7 +37,11 @@ mynumber: 5
         <ul>
             {% for post in site.posts limit: 3 %}
                 <li>
-                    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                    <h3>
+                    {% if post.categories[0] == "Projects" %}
+                        <span>{{ post.categories[1] }}:</span>
+                    {% endif %}
+                    <a href="{{ post.url }}">{{ post.title }}</a></h3>
                     <!--{{ post.excerpt }} -->
                 </li>
             {% endfor %}

@@ -18,9 +18,9 @@ layout: default
       {%- assign project_cat = page.categories[0] | escape | downcase -%}
       {%- if project_cat == "projects" -%}
         <br>
-        <span>Project: <a href="/projects/{{ page.categories[1] | downcase }}">{{ page.categories[1] }}</a></span>
+        <span>Project: <a href="/projects/{{ page.categories[1] | downcase | replace: ' ','-' }}">{{ page.categories[1] }}</a></span>
       {%- endif -%}
-      {% if page.tags %}
+      {% if page.tags[0] %}
         <br>
         <span>Tags: </span>
         {% for tag in page.tags %}
