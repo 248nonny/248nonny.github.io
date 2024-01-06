@@ -29,7 +29,37 @@ layout: default
     <div class="gallery-title">
         <h2 style="margin: 0px">{{ img.title }}</h2> <span class="grey-color">{{ img.date | date: "%b %-d, %Y" }}</span><br>
     </div>
-    <img class="gallery-image" src="/assets/images/{{ data_name }}/{{ img.filename }}" alt="{{ img.alt }}">
+    {% if img.video %}
+        <iframe class="gallery-video" src="{{ img.url }}" allow="accelerometer" allowfullscreen></iframe>
+    {% else %}
+        <img class="gallery-image" src="/assets/images/{{ data_name }}/{{ img.filename }}" alt="{{ img.alt }}">
+    {% endif %}
     <p class="gallery-caption">{{ img.caption }}</p>
     <br><br><br><br>
+{% endfor %}
+
+{% assign printed_box = false %}
+{% for img in site.static_files %}
+    {% assign target_dir = "images/" | append: data_name %}
+    {% if img.path contains target_dir %}
+        {% assign exists = false %}
+        {% for data_image in imgs %}
+            <!-- <p>{{ data_image.filename %}} -->
+            {% assign target_filename = "filename: "| append: data_image.filename %}
+            {% if img.path contains data_image.filename %}{% assign exists = true %}{% endif %}
+        {% endfor %}
+        {% if exists == false %}
+            {% if printed_box == false %}
+                <p class="round-box gallery-caption">
+                    The below images are uncataloged, either because they are of less importance
+                    or because they have yet to be cataloged. Either way, they are still here for your viewing :)
+                    <br><br><br>
+                    {{ page.catalog_message }}
+                </p>
+                {% assign printed_box = true %}
+            {% endif %}
+            <img class="gallery-image" src="{{ img.path }}">
+            <br>
+        {% endif %}
+    {% endif %}
 {% endfor %}
