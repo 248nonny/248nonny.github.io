@@ -44,7 +44,7 @@ layout: default
     {% if img.path contains target_dir %}
         {% assign exists = false %}
         {% for data_image in imgs %}
-            <!-- <p>{{ data_image.filename %}} -->
+            <!-- <p>{{ data_image.filename }} -->
             {% assign target_filename = "filename: "| append: data_image.filename %}
             {% if img.path contains data_image.filename %}{% assign exists = true %}{% endif %}
         {% endfor %}

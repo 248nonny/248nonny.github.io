@@ -39,6 +39,8 @@ plugins:
 
 
 collections:
+  posts:
+    permalink: /:categories/:year/:title/
   projects:
     output: true
     permalink: /:collection/:name
