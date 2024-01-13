@@ -25,7 +25,7 @@ title: Projects
     {% assign complete_projects = complete_projects | sort: 'importance' %}
     {% if complete_projects[0] %}
         <div class= "half-column">
-        <h1>Ongoing Projects</h1>
+        <h1>Complete Projects</h1>
         {% for page in complete_projects %}
             <h2 style="margin-top: 1cm"><a href="{{ page.url }}">{{ page.name }}</a></h2>
             {% if page.short_description %}
@@ -64,11 +64,11 @@ title: Projects
         </div>
     {% endif %}
 
-    {% assign complete_projects = site.projects | where: 'status',"Complete" %}
+    {% assign complete_projects = site.projects | where: 'status',"Abandoned" %}
     {% assign complete_projects = complete_projects | sort: 'importance' %}
     {% if complete_projects[0] %}
         <div class= "half-column">
-        <h1>Ongoing Projects</h1>
+        <h1>Abandoned Projects</h1>
         {% for page in complete_projects %}
             <h2 style="margin-top: 1cm"><a href="{{ page.url }}">{{ page.name }}</a></h2>
             {% if page.short_description %}
