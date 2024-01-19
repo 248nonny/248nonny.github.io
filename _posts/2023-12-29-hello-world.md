@@ -3,7 +3,7 @@ layout: post
 author: 248nonny
 ---
 
-This is the first blog post I'm writing with jekyll :D Hooray hooray hooray!!
+This is the first blog post I'm writing with jekyll :D Hooray!!
 
 ([Jekyll](https://jekyllrb.com/) is the platform I used to build this site.)
 

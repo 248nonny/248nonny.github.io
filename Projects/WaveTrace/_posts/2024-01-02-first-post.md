@@ -5,4 +5,4 @@ tags: hello-world
 ---
 
 
-Heloo!! This is the first post giving details about WaveTrace.
+Hello, World! This is a test post :D

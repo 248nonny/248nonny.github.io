@@ -14,33 +14,38 @@ layout: default
 </p>
 <br><br>
 
+
 {% assign data_name = page.name | replace: " ","-" %}
-{% assign imgs = site.data.galleries[data_name] %}
 
-{% if page.sort_by == "date" or page.sort_by == "oldest" %}
-    {% assign imgs = imgs | sort: "date" %}
-{% elsif page.sort_by == "newest" %}
-    {% assign imgs = imgs | sort: "date" | reverse %}
-{% elsif page.sort_by == "alphabetic" %}
-    {% assign imgs = imgs | sort: "name" %}
-{% endif %}
+{% if site.data.galleries[data_name] %}
+    {% assign imgs = site.data.galleries[data_name] %}
 
-{% for img in imgs %}
-    <div class="gallery-title">
-        <h2 style="margin: 0px">{{ img.title }}</h2> <span class="grey-color">{{ img.date | date: "%b %-d, %Y" }}</span><br>
-    </div>
-    {% if img.video %}
-        <iframe class="gallery-video" src="{{ img.url }}" allow="accelerometer" allowfullscreen></iframe>
-    {% else %}
-        <img class="gallery-image" src="/assets/images/{{ data_name }}/{{ img.filename }}" alt="{{ img.alt }}">
+    {% if page.sort_by == "date" or page.sort_by == "oldest" %}
+        {% assign imgs = imgs | sort: "date" %}
+    {% elsif page.sort_by == "newest" %}
+        {% assign imgs = imgs | sort: "date" | reverse %}
+    {% elsif page.sort_by == "alphabetic" %}
+        {% assign imgs = imgs | sort: "name" %}
     {% endif %}
-    <p class="gallery-caption">{{ img.caption }}</p>
-    <br><br><br><br>
-{% endfor %}
+
+    {% for img in imgs %}
+        <div class="gallery-title">
+            <h2 style="margin: 0px">{{ img.title }}</h2> <span class="grey-color">{{ img.date | date: "%b %-d, %Y" }}</span><br>
+        </div>
+        {% if img.video %}
+            <iframe class="gallery-video" src="{{ img.url }}" allow="accelerometer" allowfullscreen></iframe>
+        {% else %}
+            <img class="gallery-image" src="/assets/images/{{ data_name }}/{{ img.filename }}" alt="{{ img.alt }}">
+        {% endif %}
+        <p class="gallery-caption">{{ img.caption }}</p>
+        <br><br><br><br>
+    {% endfor %}
+{% endif %}
 
 {% assign printed_box = false %}
 {% for img in site.static_files %}
     {% assign target_dir = "images/" | append: data_name %}
+    {% assign target_dir = target_dir | append: '/' %}
     {% if img.path contains target_dir %}
         {% assign exists = false %}
         {% for data_image in imgs %}
@@ -53,8 +58,10 @@ layout: default
                 <p class="round-box gallery-caption">
                     The below images are uncataloged, either because they are of less importance
                     or because they have yet to be cataloged. Either way, they are still here for your viewing :)
-                    <br><br><br>
-                    {{ page.catalog_message }}
+                    {% if page.catalog_message %}
+                        <br><br><br>
+                        {{ page.catalog_message }}
+                    {% endif %}
                 </p>
                 {% assign printed_box = true %}
             {% endif %}
