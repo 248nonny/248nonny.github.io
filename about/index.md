@@ -17,7 +17,7 @@ From rocket motors to electrolysis cells to music and harmony, my interests span
 - Electronic Circuits (specifically high power / high voltage hehe)
 
 
-## About Being Half Deaf
+<h2 id="about-being-half-deaf">About Being Half Deaf</h2>
 On March 1st 2023, towards the end of my final year of high school, I woke up with extreme dizzyness, and an inability to hear from my right ear. I went to the hospital, and I was diagnosed eith sudden sensorineural hearing loss. Throughout the next months, I got steriod shots through my eardrum, and spent many hours in a hyperbaric oxygen therapy chamber, all while studying for my IB exams.
 
 The treatments did little to help, and while my hearing on my right side has improved from literally nothing to a very small amount, it remains functionally useless for most applications.
