@@ -14,6 +14,6 @@ In 2022, my high school organized a school wide science photo contest, where eac
 
 I decided I wanted to take some pictures of electric arcs, and adding some metal salts and experimenting with photographic techniques (see below posts for details), I ended up winning the contest with the following picture:
 
-<img class="gallery-image" src="/assets/images/Arc-Pics-Legacy/good1.jpg" style="width: 50%">
+<img class="post-image" src="/assets/images/Arc-Pics-Legacy/good1.jpg" style="width: 60%">
 
-More pictures from this photoshoot are available in the project gallery, as well as a [video]() showing my photoshoot setup.
+More pictures from this photoshoot are available in the project gallery, as well as a video showing my photoshoot setup.

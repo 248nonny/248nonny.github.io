@@ -1,0 +1,24 @@
+---
+layout: blog_posts
+name: Tags
+header: "Posts by Tag"
+---
+
+
+{% for cat in site.categories %}
+    <h2>{{ cat[0] }}</h2>
+    <ul>
+    {% for post in site.posts %}
+        {% for post_cat in post.categories %}
+            {% if cat[0] == post_cat %}
+                <li>
+                    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                    {% if post.categories[0] == "Projects" %}
+                        Project: {{ post.categories[1] }}
+                    {% endif %}
+                </li>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+    </ul>
+{% endfor %}
