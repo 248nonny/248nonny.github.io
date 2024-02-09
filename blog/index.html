@@ -8,6 +8,10 @@ header: All Posts
     {% for post in site.posts %}
         <li>
             <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+            {%- assign project_cat = post.categories[0] | escape | downcase -%}
+            {%- if project_cat == "projects" -%}
+                <span class="post-meta">Project: <a href="/projects/{{ page.categories[1] | downcase | replace: ' ','-' }}">{{ post.categories[1] }}</a></span>
+            {%- endif -%}
             {{ post.excerpt }}
         </li>
     {% endfor %}

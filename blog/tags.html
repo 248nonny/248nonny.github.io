@@ -16,6 +16,9 @@ header: "Posts by Tag"
                     {% if post.categories[0] == "Projects" %}
                         Project: {{ post.categories[1] }}
                     {% endif %}
+
+                    <br><br>
+
                 </li>
             {% endif %}
         {% endfor %}
