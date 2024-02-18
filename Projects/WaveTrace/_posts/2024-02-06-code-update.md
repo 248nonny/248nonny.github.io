@@ -49,4 +49,4 @@ Lamentably, running the program makes the audio unavailable to other programs, s
 #### Coming Up Soon...
 This is a very exciting milestone for me, since none of the past iteration ever had all these components working together. Also, I'm quite happy with the structure of the program; with the use of classes, and better code structure than previous iterations, I feel confident that it will be easy to adapt this code to other audio sources (which I must do for triangulation and the true WaveTrace POC), so hooray for <a href="https://en.wikipedia.org/wiki/Object-oriented_programming" target="_blank">OOP</a>!
 
-Next up I'll write the code for the FFTProcessor, and make it so that the graphs van display the spectra they output (as another small POC), after which I will build an experimental setup with multiple microphones so I can start experimenting with triangulation.
+Next up I'll write the code for the FFTProcessor, and make it so that the graphs can display the spectra they output (as another small POC), after which I will build an experimental setup with multiple microphones so I can start experimenting with triangulation.
