@@ -12,8 +12,8 @@ Now, this new method is actually pretty obvious; I feel just a little bit dumb f
 
 A cutaway of the setup might look something like the above image, where the red dots represent microphones, and the green(ish) lines represent barriers or dividers of sorts that essentially act to make the microphones more directional.
 
-With some testing, I think I can develop some sort of a curve fit that for a setup like the above, could map the angle that the device is at to the intensity of a sound signal in each of the microphones, given a single source of sound from one direction. Using this, I could then work backwards to figure out in what direction a sound is relative to device given the intensity of the signal at each microphone.
+With some testing, I think I can develop some sort of a curve fit that for a setup like the above, which would map the angle that the device is at to the intensity of a sound signal in each of the microphones, given a single source of sound from one direction. Using this, I could then work backwards to figure out in what direction a sound is relative to the device given the intensity of the signal at each microphone.
 
-The key part in this new method is still the FFT, which is what will allow multiple sounds to be tracked at once; we just measure the intensity of each frequency at each microphone, and apply the inverse curve fit to each frequency to estimate its origin.
+The key part in this new method is still the FFT, which is still what will allow multiple sounds to be tracked at once; we just measure the intensity of each frequency at each microphone, and apply the inverse curve fit to each frequency to estimate its origin.
 
-The immediate next step I will take is to design some 3D printed mounts for the microphones that have cones built in so that I can implement the above strategy. I will also make a frame to fix the microphones to. All in all, it looks like I'll have a (hopefully) working proof of concept in the near future! (I am excited eheheh :D)
+The immediate next step I will take is to design some 3D printed mounts for the microphones that have cones built in, so that I may implement the above strategy. I will also make a frame to fix the microphones to. All in all, it looks like I'll have a (hopefully) working proof of concept in the near future! (I am excited eheheh :D)
