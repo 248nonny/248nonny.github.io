@@ -8,6 +8,8 @@ I was describing how the theory behind how this project could work to a friend o
 
 Now, this new method is actually pretty obvious; I feel just a little bit dumb for not thinking of this before thinking of the comparatively more complex triangulation method. Consider this: you take your microphones, and put some sort of a cone on each one (kind of like a sick dog), so that it picks up sound in one direction stronger than sound from other directions. Then, you just place your coned microphones so that they all point in different directions, and based off the intensity of the signal from each microphone, you can predict which direction the sound is coming from (likely somewhere between the mic with the strongest and second strongest signals). By placing the microphones closer together, the effects that the distance between mics has on the signals is minimized, and this also has the added benefit that the microhpones can be placed on a smaller object (e.g. helmet) which may be convenient for future applications.
 
+Now, proper directional microphones would be best suited for this application, but I've already bought a couple omnidirectional mics for testing, so I'll try to use these with 3D printed cones and then perhaps upgrade.
+
 <img src="/assets/images/WaveTrace/poc/mic-setup.svg" class="gallery-image">
 
 A cutaway of the setup might look something like the above image, where the red dots represent microphones, and the green(ish) lines represent barriers or dividers of sorts that essentially act to make the microphones more directional.
