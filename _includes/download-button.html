@@ -1,0 +1,11 @@
+
+{% if include.text %}
+{% assign text = include.text %}
+{% else %}
+{% assign text = ((include.link | split: "/") | last ) %}
+{% endif %}
+
+
+<div class="round-box" style="margin: auto; width: fit-content; padding: 5px; padding-left: 15px; padding-right: 15px; border-radius: 5">
+<a href="{{ include.link }}" download>{{ text }} ⇓</a>
+</div>
