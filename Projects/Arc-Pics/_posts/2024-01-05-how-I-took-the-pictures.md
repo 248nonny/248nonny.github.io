@@ -8,8 +8,8 @@ In 2022, my high school organized a school wide science photo contest, where eac
 
 I decided I wanted to take some pictures of electric arcs, so I started by taking long exposure pictures of the arc produced by a small high voltage module, as well as some long exposure shots of [corona discharge](https://en.wikipedia.org/wiki/Corona_discharge) produced by the module:
 
-<img class="gallery-image" src="/assets/images/Arc-Pics-Legacy/multi-arc.JPG" style="width: 40%">
-<img class="gallery-image" src="/assets/images/Arc-Pics-Legacy/corona-discharge.JPG" style="width: 40%">
+<img class="gallery-image" src="/assets/images/Arc-Pics/multi-arc.JPG" style="width: 40%">
+<img class="gallery-image" src="/assets/images/Arc-Pics/corona-discharge.JPG" style="width: 40%">
 
 These photos, as well as the rest in this project, were taken with the following process:
 
@@ -20,16 +20,16 @@ These images were ok, however the competition was not only about the science asp
 The high voltage module I was using was bought from Amazon, and came with no documentation. The seller on Amazon claimed it could reach hundreds of thousands of volts, which was a total lie; when fed 6-12 volts, arcs would pulse across the output, but only when the spark gap was at most about 1cm wide, which even in the most generous ballpark means the voltage was under 50kV.
 
 Below is an image of the high voltage module, which is about 4cm across.
-<img class="gallery-image" src="/assets/images/Arc-Pics-Legacy/hv-module.jpg" style="width: 40%">
+<img class="gallery-image" src="/assets/images/Arc-Pics/hv-module.jpg" style="width: 40%">
 
 
 In any case, when supplied with a steady current, the module creates multiple arcs per second, which is not what I wanted for the images. To ensure arcs would be created one at a time, I used a capacitor bank. This way, a fixed amount of charge, stored in the capacitors, was available to the module. By experimenting with different capacitance and voltage levels, I found that about 5000μF at around 15V was just perfect, yielding a single, powerful arc.
 
 Below is an image of the capacitor bank used.
-<img class="gallery-image" style="width: 40%" src="/assets/images/Arc-Pics-Legacy/capacitors.png">
+<img class="gallery-image" style="width: 40%" src="/assets/images/Arc-Pics/capacitors.png">
 
 With this new method, I was able to take pictures of singular arcs, such as the picture below:
-<img class="gallery-image" style="width: 40%" src="/assets/images/Arc-Pics-Legacy/single-arc.JPG">
+<img class="gallery-image" style="width: 40%" src="/assets/images/Arc-Pics/single-arc.JPG">
 
 
 At this stage, I noticed something intriguing: there was a faint green aura around the edges of the copper wires acting as the spark gap, which made me think of [emission spectra](https://en.wikipedia.org/wiki/Emission_spectrum) and how green is a characteristic emission / absorption color of copper as an element.
@@ -38,7 +38,7 @@ It was at this point that I had the bright idea to add some extra metal salts to
 
 I had some powedered strontium carbonate from a pottery store and some [homemade copper acetate crystals](/projects/copper-acetate) lying around, so I put a drop of water on each electrode (for adhesion), placed a copper acetate crystal on one electrode, and some strontium carbonate powder on the other electrode, and the results were beyond what I had imagined!
 
-<img class="gallery-image" style="width: 40%" src="/assets/images/Arc-Pics-Legacy/good1.jpg">
+<img class="gallery-image" style="width: 40%" src="/assets/images/Arc-Pics/good1.jpg">
 <div class="gallery-caption">
     One of the best pictures that came from this project; more pictures are available in the <a href="/galleries/arc-pics-legacy">project gallery</a>.
 </div>

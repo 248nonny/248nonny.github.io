@@ -6,7 +6,7 @@ status: Ongoing
 github_repo: WaveTrace
 started: June 2023
 importance: "aaa"
-description: 'this is a short description of the project.'
+description: 'A project to address my hearing problems using C++, 3D design, and some microphones.'
 ---
 
 

@@ -86,10 +86,13 @@ See below a video of a screen recording of WaveTrace picking up two sine waves (
 
 <video src="/assets/images/WaveTrace/poc-wavetrace/WaveTrace-test.webm" controls="true" autoplay type="video/webm" class="gallery-image">
 </video>
+<div class="gallery-caption">
+    (Click to play video.)
+</div>
 
 <br><br>
 While the signal is somewhat shaky at times, it is mostly accurate (I will upload a video which also shows me moving the phones soon).
 
-Overall, I'm glad that I got a proof of concept working, and I'm looking forward to continuing this project by refining what I've built so far, and then building the next layer ontop of it.
+Overall, I'm glad that I got a proof of concept working, and I'm looking forward to continuing this project by refining what I've built so far, and then building the next layer ontop of it. I'm hoping that with proper directional mics and some more refined processing, I'll be able to more reliably pick out sounds, and this improved version will act as a foundation for the next steps in this project.
 
 For now, I've got to study for exams, so see ya later!

@@ -12,6 +12,11 @@ title: Projects
         <h1>Ongoing Projects</h1>
         {% for page in ongoing_projects %}
             <h2 style="margin-top: 1cm"><a href="{{ page.url }}">{{ page.name }}</a></h2>
+            {% if page.started %}
+                <div class="post-meta">
+                    {{ page.started }}
+                </div>
+            {% endif %}
             {% if page.short_description %}
                 {{ page.short_description }}
             {% else %}
@@ -28,6 +33,11 @@ title: Projects
         <h1>Complete Projects</h1>
         {% for page in complete_projects %}
             <h2 style="margin-top: 1cm"><a href="{{ page.url }}">{{ page.name }}</a></h2>
+            {% if page.started %}
+                <div class="post-meta">
+                    {{ page.started }}
+                </div>
+            {% endif %}
             {% if page.short_description %}
                 {{ page.short_description }}
             {% else %}
@@ -41,8 +51,8 @@ title: Projects
 
 
 <p class="round-box" style="margin-top: 1cm; margin-bottom: 1cm; margin-right: auto; width: 40%">
-    Note that projects completed before December 2023 are listed in the Legacy section below,
-    as these projects predate the creation of this site.
+    Projects completed before December 2023 are listed in the Legacy section below,
+    as they predate the creation of this site.
 </p>
 
 
@@ -55,6 +65,11 @@ title: Projects
         <h1 id="legacy">Legacy Projects</h1>
         {% for page in legacy_projects %}
             <h2 style="margin-top: 1cm"><a href="{{ page.url }}">{{ page.name }}</a></h2>
+            {% if page.started %}
+                <div class="post-meta">
+                    {{ page.started }}
+                </div>
+            {% endif %}
             {% if page.short_description %}
                 {{ page.short_description }}
             {% else %}
@@ -71,6 +86,11 @@ title: Projects
         <h1>Abandoned Projects</h1>
         {% for page in complete_projects %}
             <h2 style="margin-top: 1cm"><a href="{{ page.url }}">{{ page.name }}</a></h2>
+            {% if page.started %}
+                <div class="post-meta">
+                    {{ page.started }}
+                </div>
+            {% endif %}
             {% if page.short_description %}
                 {{ page.short_description }}
             {% else %}
