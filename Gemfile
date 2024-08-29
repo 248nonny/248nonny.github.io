@@ -20,7 +20,7 @@ group :jekyll_plugins do
   gem "jekyll-seo-tag"
 end
 
-gem "github-pages", "~> 228", group: :jekyll_plugins
+gem "github-pages", "~> 232", group: :jekyll_plugins
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
@@ -36,8 +36,10 @@ gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 # do not have a Java counterpart.
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
-gem "jekyll", "~> 3.9"
+gem "jekyll", "~> 3.10"
 
 gem "json", "~> 2.7"
 
 gem "webrick", "~> 1.8"
+
+gem "csv", "~> 3.3" 
