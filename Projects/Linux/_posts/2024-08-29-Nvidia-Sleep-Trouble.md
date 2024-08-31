@@ -133,7 +133,7 @@ diff -rupN linux-vanilla/drivers/acpi/internal.h linux-nvidiapatch/drivers/acpi/
 
  #include <linux/idr.h>
 
-+extern bool allow_nvidia_audio_removal;
++extern bool allow_nvidia_removal;
 +
  extern struct acpi_device *acpi_root;
 
