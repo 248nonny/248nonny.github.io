@@ -146,7 +146,7 @@ diff -rupN linux-vanilla/drivers/acpi/osl.c linux-nvidiapatch/drivers/acpi/osl.c
  };
 
 +bool allow_nvidia_removal = false;
-+core_param(allow_nvidia_audio_removal, allow_nvidia_audio_removal, bool, 0644);
++core_param(allow_nvidia_audio_removal, allow_nvidia_removal, bool, 0644);
 +
  static void acpi_hotplug_work_fn(struct work_struct *work)
  {
