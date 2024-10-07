@@ -15,7 +15,7 @@ Instead, I put together yet another iteration of the project, which I uploaded t
 The reason I decided to once again start from scratch, instead of forking or adding on to my previous iteration (available in the <a href="https://github.com/248nonny/FFT-Test" target="_blank">FFT-Test</a> github repo), was that I had some second thoughts about how my previous iteration was structured; I created lots of classes for objects and had an idea of how the program could operate at a high level, but when I got into the details, my original plan turned out to be rather messier than I deemed tolerable.
 
 <br>
-### Details for Nerds (liek me :o )
+### Details for Nerds 
 
 #### General Structure
 
