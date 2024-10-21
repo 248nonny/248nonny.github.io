@@ -126,21 +126,9 @@ It took me a while to test different functions with different `if` conditions, a
 
 <div style="max-height: 300px; overflow-y: scroll;">
 {% highlight c %}
-diff -rupN linux-vanilla/drivers/acpi/internal.h linux-nvidiapatch/drivers/acpi/internal.h
---- linux-vanilla/drivers/acpi/internal.h	2024-08-28 15:12:34.001708465 -0700
-+++ linux-nvidiapatch/drivers/acpi/internal.h	2024-08-30 20:47:20.127635939 -0700
-@@ -11,6 +11,8 @@
-
- #include <linux/idr.h>
-
-+extern bool allow_nvidia_removal;
-+
- extern struct acpi_device *acpi_root;
-
- int early_acpi_osi_init(void);
 diff -rupN linux-vanilla/drivers/acpi/osl.c linux-nvidiapatch/drivers/acpi/osl.c
 --- linux-vanilla/drivers/acpi/osl.c	2024-08-28 15:12:34.035708325 -0700
-+++ linux-nvidiapatch/drivers/acpi/osl.c	2024-08-30 20:33:42.269156091 -0700
++++ linux-nvidiapatch/drivers/acpi/osl.c	2024-08-30 21:58:33.910035943 -0700
 @@ -1148,10 +1148,22 @@ struct acpi_hp_work {
  	u32 src;
  };
@@ -164,6 +152,18 @@ diff -rupN linux-vanilla/drivers/acpi/osl.c linux-nvidiapatch/drivers/acpi/osl.c
  	acpi_os_wait_events_complete();
  	acpi_device_hotplug(hpw->adev, hpw->src);
  	kfree(hpw);
+diff -rupN linux-vanilla/include/linux/acpi.h linux-nvidiapatch/include/linux/acpi.h
+--- linux-vanilla/include/linux/acpi.h	2024-08-28 15:12:39.507685961 -0700
++++ linux-nvidiapatch/include/linux/acpi.h	2024-08-30 21:58:46.528983667 -0700
+@@ -74,6 +74,8 @@ static inline struct fwnode_handle *acpi
+ 	return fwnode;
+ }
+
++extern bool allow_nvidia_removal;
++
+ static inline void acpi_free_fwnode_static(struct fwnode_handle *fwnode)
+ {
+ 	if (WARN_ON(!is_acpi_static_node(fwnode)))
 diff -rupN linux-vanilla/init/main.c linux-nvidiapatch/init/main.c
 --- linux-vanilla/init/main.c	2024-08-28 15:12:40.025683870 -0700
 +++ linux-nvidiapatch/init/main.c	2024-08-28 15:21:39.951150105 -0700
@@ -175,7 +175,6 @@ diff -rupN linux-vanilla/init/main.c linux-nvidiapatch/init/main.c
  	/* parameters may set static keys */
  	jump_label_init();
  	parse_early_param();
-{% endhighlight %}
 </div>
 
 
