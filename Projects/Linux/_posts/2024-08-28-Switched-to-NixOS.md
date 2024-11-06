@@ -21,7 +21,7 @@ Also, the nix package repository is HUGE! It's literally [one of the biggest out
 
 The other cool thing about the configuration of NixOS is that it builds up from scratch. What I mean by that is that you can configure everything from the desktop environment/window manager (if you need one) to which kernel version to use, to exactly which services and systems to enable (don't need audio because you're using NixOS on a home server or something? Just turn it off with one option!), allowing for lots of flexibility.
 
-Because of the declarative nature, you can just copy your configuration nix files to a different computer, run a single "nixos-install" command, and, without exaggeration, and effectively identically configured system will be created. How wonderful!
+Because of the declarative nature, you can just copy your configuration nix files to a different computer, run a single "nixos-rebuild" command, and, without exaggeration, an effectively identically configured system will be created. How wonderful!
 
 <br><br>
 Anyways, I finally got around to setting up ruby and jekyll with nix-shell today, so here I am finally writing an update.
