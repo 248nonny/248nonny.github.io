@@ -175,6 +175,7 @@ diff -rupN linux-vanilla/init/main.c linux-nvidiapatch/init/main.c
  	/* parameters may set static keys */
  	jump_label_init();
  	parse_early_param();
+{% endhighlight %}
 </div>
 
 
