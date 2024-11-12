@@ -3,7 +3,7 @@ layout: post
 author: 248nonny
 ---
 
-So. School is starting up again soon, and I'll be in my second year at UBC studying Engineering Physics. I was trying to get my laptop school-ready by enabling and experimenting with myriad power management settings, and naturally on of these was to enable power management for my discrete nvidia graphics card, to avoid it chugging my whole battery while I'm taking notes.
+So. School is starting up again soon, and I'll be in my second year at UBC studying Engineering Physics. I was trying to get my laptop school-ready by enabling and experimenting with myriad power management settings, and naturally one of these was to enable power management for my discrete nvidia graphics card, to avoid it chugging my whole battery while I'm taking notes.
 
 ## NixOS Options
 
