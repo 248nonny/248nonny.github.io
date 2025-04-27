@@ -10,9 +10,13 @@ While most of these are not in fact blogs, here are some websites and content cr
 
 This webcomic is arguably my favourite source of comedy; while it is generally rather esoteric, you either learn something in the process of figuring out a joke, or you get a rush of wittiness from understanding a comic on the spot.
 
+## <a href="https://www.3blue1brown.com/" target="_blank">ThreeBlueOneBrown</a>
+
+This yotube channel has great videos on various math topics and problems.
+
 ## <a href="https://www.youtube.com/styropyro" target="_blank">Styropyro</a>
 
-The projects documented on this youtube channel are absurdly crazy and awesome; Drake (the owner of the account) is my idol both because I love the projects he makes, and I admire the fearlessness (... or is it lack of self preserverance?) that he has towards all things lethal.
+The projects documented on this youtube channel are absurdly crazy and awesome; Drake (the owner of the account) is my idol both because I love the projects he makes, and I admire the fearlessness (... or is it lack of self preservation?) that he has towards lasers and high voltage.
 
 <!-- ## [ElectroBOOM](https://www.youtube.com/electroboom) -->
 ## <a href="https://www.youtube.com/electroboom" target="_blank">ElectroBOOM</a>
@@ -22,5 +26,5 @@ This YouTube channel has many rather informative and useful videos, while also p
 
 ## <a href="https://www.youtube.com/c/explosionsfire2" target="_blank">Explosions and Fire</a>
 
-Do you think chemistry is cool? Do you like explosions and/or fire? (for me the answer is "yes" to both!) Then this YouTube account is for you! Watch as Tom, a chemist in Australia, makes crazy cool molecules (that happen to violently explode). See also the <a href="https://www.youtube.com/@ExtractionsAndIre" target="_blank">companion account</a> which details the processes behind the scenes in more detail.
+Do you think chemistry is cool? Do you like explosions and/or fire? (for me the answer is "yes" to both!) Then this YouTube account is for you! Watch as Tom, a chemist in Australia, makes crazy cool molecules (that happen to violently explode). See also the <a href="https://www.youtube.com/@ExtractionsAndIre" target="_blank">companion account</a> which goes through the chemical syntheses in more detail.
 

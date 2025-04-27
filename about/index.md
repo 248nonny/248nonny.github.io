@@ -4,18 +4,19 @@ title: About
 header: About Me
 ---
 
-I am Ronny Cravioto-Ross, a first year student at UBC's Applied Science program. In my free time, I love to explore my interests, learn about new topics, and apply what I learn while doing projects and creating things.
+I am Ronny Cravioto-Ross, an Engineering Physics student at the University of British Columbia. In my free time, I enjoy exploring my interests, learning about new topics, and solving real world problems with the things I learn.
 
 ## Interests
-From rocket motors to electrolysis cells to music and harmony, my interests span many fields and disciplines, and I'm not yet sure what I would like to become an expert in. Some general categories of interest of mine are:
+
+I have many interests across various fields, and I am still in the process of deciding what I would like to specialize in. A few general topics I am interested in are:
 
 - Mathematics
-- Music (Jazz is cool :D)
-- Chemistry
-- Rocket propulsion
-- Computer Programming
-- Electronic Circuits (specifically high power / high voltage hehe)
+- Computer Programming (I love Rust)
+- Physics, specifically the application of advanced mathematical tools (PDEs, vector calculus, complex variables, etc) for creating models of the world around us.
+- Music (My favourite group is currently [Animals As Leaders.](https://youtu.be/s4Yb_vf-Qfo))
+(though I also like jazz/jazz fusion, e.g. [this song,](https://youtu.be/AGFeW3HOjZE) [this song,](https://youtu.be/oPDUZKBUhlg) [and that other song.](https://youtu.be/ppJQKfqhFfE))
 
+I am also particularly interested in fusion technology for energy production, since I believe that commercialized fusion reactor would bring a new era of near-limitless clean energy for humanity at large.
 
 <h2 id="about-being-half-deaf">About Being Half Deaf</h2>
 On March 1st 2023, towards the end of my final year of high school, I woke up with extreme dizzyness, and an inability to hear from my right ear. I went to the hospital, and I was diagnosed eith sudden sensorineural hearing loss. Throughout the next months, I got steriod shots through my eardrum, and spent many hours in a hyperbaric oxygen therapy chamber, all while studying for my IB exams.
@@ -28,4 +29,4 @@ Another impact, which was more of a surprise, and somewhat more interesting, is 
 
 This effect is more intriguing, as it seems to suggest our brains use the stereo input from both ears to not only pick apart which direction sound comes from, but also to focus in on specific sounds and isolate them from background noise.
 
-If you're interested more in my hearing, and in how I plan to fix my inability to tell which direction sound comes from, check out my project [WaveTrace](/projects/wavetrace).
+My project [WaveTrace](/projects/wavetrace) explores estimating the directions that sound comes from using computers and microphones!

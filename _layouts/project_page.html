@@ -54,6 +54,7 @@ layout: default
 
 
         {% assign category_name = page.name | replace: " ","-" %}
+        {% assign category_name = category_name | replace: ".","" %}
         {% assign category = site.categories[category_name] %}
         {% if category %}
             <div class="project-posts">

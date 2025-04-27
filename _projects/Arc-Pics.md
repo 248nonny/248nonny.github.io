@@ -3,7 +3,7 @@ name: Arc-Pics
 layout: project_page
 gallery: true
 # gallery_name: arc-pics-legacy
-status: Legacy
+status: Complete
 started: March 2022
 finished: March 2022
 importance: bbb

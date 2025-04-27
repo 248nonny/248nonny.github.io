@@ -17,7 +17,8 @@ mynumber: 5
 
     <div class="menu-column">
         <h3>Featured Projects:</h3>
-        <ul>
+        <ul style='text-align: left'>
+            <li><a href="/projects/dsp-eg">DSP-EG</a></li>
             <li><a href="/projects/wavetrace">WaveTrace</a></li>
             <li><a href="/projects/arc-pics">Arc Pics</a></li>
         </ul>
@@ -27,15 +28,15 @@ mynumber: 5
     <div class="main-column">
 
         <p>
-            RC is a website about many things, from coding to electronics to music;
-            anything that interests me may find its way here!   
+            My name is Ronny Cravioto-Ross, and this website is where I talk
+            about my interests, including coding, electronics, music, and more!
         </p>
 
         <br>
 
         <h2>Recent Posts</h2>
         <ul>
-            {% for post in site.posts limit: 3 %}
+            {% for post in site.posts limit: 5 %}
                 <li>
                     <h3>
                     {% if post.categories[0] == "Projects" %}
