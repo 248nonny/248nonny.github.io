@@ -394,3 +394,14 @@
 .grey-color {
   color: $grey-color;
 }
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid img {
+  width: 50%;
+  height: auto;
+  display: block;
+}

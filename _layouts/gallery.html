@@ -5,9 +5,8 @@ layout: default
 <h1>Gallery: {{ page.name }}</h1>
 <p class="post-meta">
     {% if page.project %}
-        <a href="/projects/{{ page.name | downcase | replace: ' ','-' }}">Project Page</a> •
+        <a href="/projects/{{ page.name | downcase | replace: ' ','-' }}">Project Page</a>
     {% endif %}
-    Number of Images: {{ site.data.galleries[page.name] | size }}
     {% if page.see_also_link %}
         • See also: <a href="{{ page.see_also_link }}">{{ page.see_also_text }}</a>
     {% endif %}
@@ -55,13 +54,11 @@ layout: default
         {% endfor %}
         {% if exists == false %}
             {% if printed_box == false %}
-                <p class="round-box gallery-caption">
-                    The below images have not yet been categorized or captioned.
-                    {% if page.catalog_message %}
-                        <br><br><br>
+                {% if page.catalog_message %}
+                    <p class="round-box gallery-caption">
                         {{ page.catalog_message }}
-                    {% endif %}
-                </p>
+                    </p>
+                {% endif %}
                 {% assign printed_box = true %}
             {% endif %}
             <img class="gallery-image" src="{{ img.path }}">
