@@ -7,6 +7,17 @@ Checkout [the project's github](https://github.com/248nonny/DSP-EG) to see the r
 code/dev environment for this post (and the project at large I suppose). The (shortened)
 commit hash at the time of writing was `9178bc6`.
 
+The Raspberry Pi Zero 2 W usually runs Linux. This is not an ideal platform to create
+real-time, low-latency digital guitar effects since the OS's scheduler makes
+timing guiarantees basically nonexistent, and it also adds elements of uncertainty to
+the concurrency of the code (ideally we want to control exactly what happens in each
+of the 4 cores, but with the scheduler such control is difficult if not impossible).
+
+The solution to this is usually to use a microcontroller of sorts, but I couldn't find
+anything that matches the Zero 2 W's specs for it's price (~$23 CAD). So, the solution:
+write the code in Rust for ***bare metal execution!*** This post will go over the basic
+setup I went through in order to get code running bare-metal on the Zero 2 W.
+
 I ordered a couple of Raspberry Pi Zero 2 Ws from
 [Digikey](https://www.digikey.ca/en/products/detail/raspberry-pi/SC1176/15298147),
 which cost about $22 CAD a piece. I also got some
@@ -89,8 +100,6 @@ void setup() {
   Serial1.begin(115200, SERIAL_8N1, 20, 21);  // UART: RX=20, TX=21
 
   while (!Serial) {}
-
-  Serial.println("Hello, world!");
 }
 
 void loop() {
