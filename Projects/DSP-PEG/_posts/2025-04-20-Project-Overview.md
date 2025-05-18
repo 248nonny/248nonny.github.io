@@ -94,7 +94,7 @@ components can be chosen to align with the goals and the plan.
 
 The general plan is outlined in the below block diagram:
 
-<img  src="/assets/images/DSP-EG/DSP-EG-block-diagram.excalidraw.svg">
+<img  src="/assets/images/DSP-PEG/DSP-PEG-block-diagram.excalidraw.svg">
 
 First, the signal from the guitar goes through a high impedance buffer/amplifier stage,
 which is necessary to separate the weak guitar signal from the ADC input. This also allows

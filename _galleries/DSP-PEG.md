@@ -1,6 +1,6 @@
 ---
 layout: gallery
-name: DSP-EG
+name: DSP-PEG
 project: true
 sort_by: alphabetic
 ---

@@ -1,16 +1,16 @@
 ---
-name: DSP-EG
+name: DSP-PEG
 layout: project_page
 gallery: true
-github_repo: DSP-EG
+github_repo: DSP-PEG
 status: Ongoing
 started: April 2025
 importance: "aaa"
-description: 'Digital Signal Processing - Programmable Effects'
+description: 'Digital Signal Processing - Programmable Effects Generator'
 ---
 
 
-### Digital Signal Processing - Programmable Effects!
+### Digital Signal Processing - Programmable Effects Generator!
 
 After purchasing my first electric guitar, I decided it would be
 fun and interesing to create my own guitar pedals. Making analog pedals sounded impractical,
@@ -23,14 +23,15 @@ for each new effect would be much reduced - with a digital pedal, each new effec
 be implemented with just a bit of extra code!
 
 Currently, I plan on using a [Raspberry Pi Zero 2 W](https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/)
-(which will run some diy bare-metal rust code for high-speed DSP and digital effects), as well as
-a TI PCM1863 ADC and an AKM AK4432 DAC for high-quality audio IO.
+(which will run linux in parallel with some diy bare-metal rust code for high-speed DSP
+and digital effects), as well as a TI PCM1863 ADC and an AKM AK4432 DAC for high-quality
+audio IO.
 
 Simplified project block diagram:
 
-<img  src="/assets/images/DSP-EG/DSP-EG-block-diagram.excalidraw.svg">
+<img  src="/assets/images/DSP-PEG/DSP-PEG-block-diagram.excalidraw.svg">
 
 Find [here](https://github.com/248nonny/Digital_Stereo_IO_Breakout_Board) KiCAD files
 for my ADC/DAC test board.
 
-Here is the original [Project Overview](/projects/dsp-eg/2025/Project-Overview/).
+Here is the original [Project Overview](/projects/dsp-peg/2025/Project-Overview/).

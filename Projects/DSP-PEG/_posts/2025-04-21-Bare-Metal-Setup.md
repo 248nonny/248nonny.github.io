@@ -3,7 +3,7 @@ layout: post
 author: Ronny
 ---
 
-Checkout [the project's github](https://github.com/248nonny/DSP-EG) to see the relevant
+Checkout [the project's github](https://github.com/248nonny/DSP-PEG) to see the relevant
 code/dev environment for this post (and the project at large I suppose). The (shortened)
 commit hash at the time of writing was `9178bc6`.
 

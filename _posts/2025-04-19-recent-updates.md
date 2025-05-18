@@ -22,4 +22,4 @@ and I'll upload some pics as soon as I get back to Vancouver (I am currently in
 Lethbridge, and the guitar is back home).
 
 Largely influenced by this recent purchase, I have also decided to take on a new project,
-which is now underway: I will be [building my own digital guitar pedal from scratch](/projects/dsp-eg).
+which is now underway: I will be [building my own digital guitar pedal from scratch](/projects/dsp-peg).

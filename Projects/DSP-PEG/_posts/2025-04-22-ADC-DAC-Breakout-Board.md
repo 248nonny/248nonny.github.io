@@ -45,7 +45,7 @@ the same, so the plan is to hook them both up to the same I2S data and LR clocks
 the ADC would output values on one data line, and the DAC would receive values on
 the other data line (see below block diagram).
 
-<img src="/assets/images/DSP-EG/I2S-block-diagram.excalidraw.svg">
+<img src="/assets/images/DSP-PEG/I2S-block-diagram.excalidraw.svg">
 
 This means that the input and output data rates would be necessarily synchronized,
 which is what we want!
@@ -97,11 +97,11 @@ See below images of the PCB design! The KiCAD files can be found
 [on my github.](https://github.com/248nonny/Digital_Stereo_IO_Breakout_Board)
 
 <div class="grid">
-<img src="/assets/images/DSP-EG/IOBB/IOBB-all-layers.png">
-<img src="/assets/images/DSP-EG/IOBB/IOBB-top-layer.png">
-<img src="/assets/images/DSP-EG/IOBB/IOBB-bottom-layer.png">
-<img src="/assets/images/DSP-EG/IOBB/IOBB-CAD-top.png">
-<img src="/assets/images/DSP-EG/IOBB/IOBB-CAD-bottom.png">
+<img src="/assets/images/DSP-PEG/IOBB/IOBB-all-layers.png">
+<img src="/assets/images/DSP-PEG/IOBB/IOBB-top-layer.png">
+<img src="/assets/images/DSP-PEG/IOBB/IOBB-bottom-layer.png">
+<img src="/assets/images/DSP-PEG/IOBB/IOBB-CAD-top.png">
+<img src="/assets/images/DSP-PEG/IOBB/IOBB-CAD-bottom.png">
 </div>
 
 I took some things into consideration for optimal noise performance. Specifically, I
@@ -128,7 +128,7 @@ the pins below and slightly left of the DAC.
 The three chips used to generate the master clock signal (listed above) are circled
 in the below image:
 
-<img src="/assets/images/DSP-EG/IOBB/IOBB-CAD-master-clock.png">
+<img src="/assets/images/DSP-PEG/IOBB/IOBB-CAD-master-clock.png">
 
 The circuit is meant to be powered by the RPi's 5V power output, and is regulated
 down to 3.3V by the two separate LDO regulators (seen near the top of the PCB). The
