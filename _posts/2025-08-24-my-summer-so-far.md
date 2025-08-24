@@ -1,0 +1,46 @@
+---
+layout: post
+author: 248nonny
+---
+
+
+This summer I did what they call "Robot Summer" at UBC Engineering Physics. In the May through June summer semester I took 4 full classes plus a robot class (ENPH 253) which lasted from May through August.
+
+The robot class was by far the highlight! In teams of four, we had to build fully autonomous robots to accomplish tasks and compete against the other teams ([read more here](https://projectlab.engphys.ubc.ca/enph-253-2025/)). This year, the scenario was that there was a animal hospital on fire, and we needed to save as many "pets" (stuffed animals) as we could within 2 minutes.
+
+The awesome thing about this class is that we were given minimal direction in terms of how to build our robots; they basically gave us the rules for the competition and let us run amok in the lab. We spent May through June mostly working on our other classes, though we definitely spent time coming up with ideas and designs for the robots. Starting in July, the robot lab was open 5 days a week from 10am to 8pm (10 hours a day!!), and I spent just about every hour I could in the lab!
+
+There was so much to do, including mechanical prototyping (CAD, 3D printing, machining metal parts with the lathe and mill, etc), electrical design (PCBs for motor drivers and breakout boards, figuring out power budgets, isolation between the microcontroller and the power circuits, etc), and software design (writing firmware for the robot, abstracting away the hardware, etc).
+
+I was mainly involved in the electrical and software design, though I also contributed somewhat to the mechanical design; in general, me and my teammates would run ideas past each other quite often, and as a result we all contributed in some fashion to many aspects of the robot!
+
+I designed two PCBs (and made numerous one-off proto boards); I designed an H-Bridge board and a breakout board for our ESP32 microcontroller (see below images). The KiCAD files are available [here](https://github.com/enphx).
+
+### Breakout Board PCB in KiCAD:
+<img src="/assets/images/2025-08-24_14-42-esp-breakout.png">
+
+### H-Bridge PCB in KiCAD:
+<img src="/assets/images/2025-08-24_14-42-hbridge.png">
+
+### Both PCBs After Arriving from JLCPCB:
+<img src="/assets/images/2025-08-24_14-57-pcbs-arrived.png" >
+
+### Part of the Populated Breakout Board:
+<img src="/assets/images/2025-08-24_14-50-pcb-populated.png" >
+
+## Software
+
+For the software, we wrote over 4,000 lines of firmware to control all the motors, read all the sensors, and control the robot (e.g. moving the arm to certain positions, follow a black line of tape on the field, etc). We used PID controllers all over the place, for example our wheels were velocity PID controlled using magnetic encoders, one of our arm joints was a DC motor with a potentiometer attached which would use PID control to go to whichever angle, and the tape following algorithm changed the rate of turning using a PID controller too.
+
+The codebase is available at [github.com/enphx/firmware](https://github.com/enphx/firmware).
+
+On top of all this, I also wrote a serial interface which allowed us to talk to the robot in real time! This allowed us to:
+- Troubleshoot PID issues by viewing the PID's inputs, set point, and outputs.
+- Adjust the arm's position in real time.
+- Look at the robot's odometry output (where the robot thinks it is based on how far the wheels have moved).
+- View the live lidar distance value, which was useful for deciding on distance thresholds for pet detection.
+
+The code for the serial interface can be found [on my github.](https://github.com/248nonny/rust_robot_serial_control_panel)
+
+
+We spent a lot of time and effort on our robot, and it paid off, since we got first place at the competiton!!
