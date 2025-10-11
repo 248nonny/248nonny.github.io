@@ -6,7 +6,7 @@ author: 248nonny
 
 This summer I did what they call "Robot Summer" at UBC Engineering Physics. In the May through June summer semester I took 4 full classes plus a robot class (ENPH 253) which lasted from May through August.
 
-The robot class was by far the highlight! In teams of four, we had to build fully autonomous robots to accomplish tasks and compete against the other teams ([read more here](https://projectlab.engphys.ubc.ca/enph-253-2025/)). This year, the scenario was that there was a animal hospital on fire, and we needed to save as many "pets" (stuffed animals) as we could within 2 minutes.
+The robot class was by far the highlight! In teams of four, we had to build fully autonomous robots to accomplish tasks and compete against the other teams ([read more here](https://projectlab.engphys.ubc.ca/enph-253-2025/), and check out [this video](https://youtu.be/nPeLP5-Fo64); My robot is the one with the purple basket!). This year, the scenario was that there was a animal hospital on fire, and we needed to save as many "pets" (stuffed animals) as we could within 2 minutes.
 
 The awesome thing about this class is that we were given minimal direction in terms of how to build our robots; they basically gave us the rules for the competition and let us run amok in the lab. We spent May through June mostly working on our other classes, though we definitely spent time coming up with ideas and designs for the robots. Starting in July, the robot lab was open 5 days a week from 10am to 8pm (10 hours a day!!), and I spent just about every hour I could in the lab!
 
@@ -29,6 +29,8 @@ I designed two PCBs (and made numerous one-off proto boards); I designed an H-Br
 <img src="/assets/images/2025-08-24_14-50-pcb-populated.png" >
 
 ## Software
+
+A quick disclaimer: All this code was written under intense time pressure, sleep deprivation, etc., (:P) so be aware that it does not necessarily reflect my best work (especially in terms of documentation and whatnot).
 
 For the software, we wrote over 4,000 lines of firmware to control all the motors, read all the sensors, and control the robot (e.g. moving the arm to certain positions, follow a black line of tape on the field, etc). We used PID controllers all over the place, for example our wheels were velocity PID controlled using magnetic encoders, one of our arm joints was a DC motor with a potentiometer attached which would use PID control to go to whichever angle, and the tape following algorithm changed the rate of turning using a PID controller too.
 
