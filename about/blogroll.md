@@ -22,7 +22,7 @@ The projects documented on this youtube channel are absurdly crazy and awesome; 
 ## <a href="https://www.youtube.com/electroboom" target="_blank">ElectroBOOM</a>
 <a href="https://www.electroboom.com" target="_blank">link to his website</a>
 
-This YouTube channel has many rather informative and useful videos, while also profiding comic relief through (un?) intentional electric shock.
+This YouTube channel has many rather informative and useful videos, while also providing comic relief through (un?) intentional electric shock.
 
 ## <a href="https://www.youtube.com/c/explosionsfire2" target="_blank">Explosions and Fire</a>
 
