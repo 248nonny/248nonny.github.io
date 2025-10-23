@@ -2,9 +2,11 @@
   link: /
 - name: Projects
   link: /projects/
-- name: Galleries
-  link: /galleries/
 - name: Blog
   link: /blog/
+- name: Resume
+  link: /assets/resume.pdf
+- name: Galleries
+  link: /galleries/
 - name: About
   link: /about/
