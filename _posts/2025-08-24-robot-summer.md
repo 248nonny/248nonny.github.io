@@ -17,16 +17,37 @@ I was mainly involved in the electrical and software design, though I also contr
 I designed two PCBs (and made numerous one-off proto boards); I designed an H-Bridge board and a breakout board for our ESP32 microcontroller (see below images). The KiCAD files are available [here](https://github.com/enphx).
 
 ### Breakout Board PCB in KiCAD:
-<img src="/assets/images/2025-08-24_14-42-esp-breakout.png">
+<img class="gallery-image" src="/assets/images/2025-08-24_14-42-esp-breakout.png">
 
 ### H-Bridge PCB in KiCAD:
-<img src="/assets/images/2025-08-24_14-42-hbridge.png">
+<img class="gallery-image" src="/assets/images/2025-08-24_14-42-hbridge.png">
 
 ### Both PCBs After Arriving from JLCPCB:
-<img src="/assets/images/2025-08-24_14-57-pcbs-arrived.png" >
+<img class="gallery-image" src="/assets/images/2025-08-24_14-57-pcbs-arrived.png" >
 
 ### Part of the Populated Breakout Board:
-<img src="/assets/images/2025-08-24_14-50-pcb-populated.png" >
+<img class="gallery-image" src="/assets/images/2025-08-24_14-50-pcb-populated.png" >
+
+### Robot Partially Assembled:
+<img class="gallery-image" src="/assets/images/robot_being_build.jpg">
+
+### Full Robot CAD:
+<img class="gallery-image" src="/assets/images/robo-summer-cad.png">
+
+### Debugging UI Screenshots:
+<img class="gallery-image" src="/assets/images/robot-summer/20250731_113747.jpg">
+<img class="gallery-image" src="/assets/images/robot-summer/20250801_192724.jpg">
+
+Top image is for PID debugging/tuning, bottom image is ToF sensor output (as well as convolution filter output). Not shown is the odometry location tracking visualization.
+
+### Robot Competition Video:
+
+<iframe class="gallery-image" width="560" height="315" src="https://www.youtube-nocookie.com/embed/nPeLP5-Fo64?si=p0_FXBaLZVGBTfcJ&amp;start=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+See my team getting interviewed and our robot in action at 55 seconds!!
+
+### Screenshot from Serial Debugging UI App (written in rust!):
+
 
 ## Software
 
@@ -34,7 +55,9 @@ A quick disclaimer: All this code was written under intense time pressure, sleep
 
 For the software, we wrote over 4,000 lines of firmware to control all the motors, read all the sensors, and control the robot (e.g. moving the arm to certain positions, follow a black line of tape on the field, etc). We used PID controllers all over the place, for example our wheels were velocity PID controlled using magnetic encoders, one of our arm joints was a DC motor with a potentiometer attached which would use PID control to go to whichever angle, and the tape following algorithm changed the rate of turning using a PID controller too.
 
-The codebase is available at [github.com/enphx/firmware](https://github.com/enphx/firmware).
+There were some non-trivial bits of code in there, such as inverse kinematics using cubic-spline approximated inverse trig functions (for computational speed at the cost of accuracy), quadrature encoder reading using interrupts, interrupt/timer-based pulse generation for stepper motor control, I2C sensor integration, ring-buffer and interrupt based UART output to avoid performance hit when debugging, odometry position tracking, among many other things!
+
+The codebase is available at [github.com/enphx/firmware](https://github.com/enphx/firmware). Note that due to debugging some crazy bugs last minute (which turned out to be hardware bugs instead of software bugs lol) there are a lot of strange commits, such as us switching between doubles and floats in the hopes of the bug magically going away... (we were desperate hehe).
 
 On top of all this, I also wrote a serial interface which allowed us to talk to the robot in real time! This allowed us to:
 - Troubleshoot PID issues by viewing the PID's inputs, set point, and outputs.
