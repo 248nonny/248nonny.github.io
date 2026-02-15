@@ -18,14 +18,15 @@ group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
   gem "jekyll-sitemap"
   gem "jekyll-seo-tag"
+  gem 'jekyll-commonmark-ghpages'
 end
 
-gem "github-pages", "~> 232", group: :jekyll_plugins
+gem "github-pages", group: :jekyll_plugins
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
 platforms :mingw, :x64_mingw, :mswin, :jruby do
-  gem "tzinfo", ">= 1", "< 3"
+  gem "tzinfo"
   gem "tzinfo-data"
 end
 
@@ -36,10 +37,12 @@ gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 # do not have a Java counterpart.
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
-gem "jekyll", "~> 3.10"
+gem "jekyll"
 
-gem "json", "~> 2.7"
+gem "json"
 
-gem "webrick", "~> 1.8"
+gem "webrick"
 
-gem "csv", "~> 3.3" 
+gem "csv" 
+
+gem "bigdecimal"
