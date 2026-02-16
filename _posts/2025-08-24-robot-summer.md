@@ -44,10 +44,7 @@ Top image is for PID debugging/tuning, bottom image is ToF sensor output (as wel
 
 <iframe class="gallery-image" width="560" height="315" src="https://www.youtube-nocookie.com/embed/nPeLP5-Fo64?si=p0_FXBaLZVGBTfcJ&amp;start=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-See my team getting interviewed and our robot in action at 55 seconds!!
-
-### Screenshot from Serial Debugging UI App (written in rust!):
-
+See my team getting interviewed and our robot in action at 0:55!!
 
 ## Software
 
