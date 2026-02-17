@@ -55,6 +55,11 @@ where `core_status` is basically an array of atomic u8 status flags (one per cor
 
 I was still not totally sure that `#[repr(C)]` was enough to guarantee identical struct layouts, especially since I am compiling for different targets (`aarch64-unknown-linux-gnu` for userspace and `aarch64-unknown-none` for baremetal), so I looked into how I could check the struct layouts after compilation to truly guarantee correctness.
 
+### Wrappers for Visibility
+
+I also created two wrapper types, `SharedMemUserspace` and `SharedMemBaremetal`. These wrappers allow me to implement functions that should only be called from userspace (or baremetal) on the respective type, allowing me to restrict which operations can be done on shared memory from which side.
+
+This is useful for (for example) enforcing concurrency assumptions (e.g. only reading from an MPSC ring buffer from userspace, and only writing from bare metal) using the compiler instead of using my brain. In general I plan on using this to very deliberately implement functionality for one side or the other in order to avoid me getting confused and calling the wrong functions from the wrong place.
 
 ### Checking Struct Layout After Compiling
 
